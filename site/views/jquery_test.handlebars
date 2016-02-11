@@ -1,0 +1,15 @@
+{{#section 'head'}}
+    <!-- we want google to ignore this page-->
+    <meta name="robots" contents="noindex">
+{{/section}}
+
+<h1>Page Test</h1>
+<p>We are testing some JQuery stuff.</p>
+
+{{#section 'jquery'}}
+    <script>
+        $('document').ready(function() {
+            $('h1').html('Jquery works');
+        });
+    </script>
+{{/section}}
