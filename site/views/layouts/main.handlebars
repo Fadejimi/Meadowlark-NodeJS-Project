@@ -27,7 +27,13 @@
         {{/if}}
         <script type="text/javascript">mocha.run();</script>
     {{/if}}-->
-
+    {{#if flash}}
+        <div class="alert alert-dismissable alert-{{flash.type}}">
+            <button type="button" class="close"
+                data-dismiss="alert" aria-hidden="true">&times;</button>
+            <strong>{{flash.intro}}</strong> {{{flash.message}}}
+        </div>
+    {{/if}}
     {{{body}}}
     <script type="text/javascript" src="/js/jquery-ui.js"></script>
     {{{_sections.jquery}}}
